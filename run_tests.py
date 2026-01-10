@@ -1,5 +1,5 @@
 from parking.storage import JSONStorage
-from parking.auth import AuthService
+from user.service import AuthService
 from parking.parking import Parking
 
 
@@ -15,8 +15,9 @@ def run():
     storage.set("slots", [None] * 2)
     storage.set("payments", [])
 
-    assert auth.register("alice", "secret") is True
-    assert auth.register("alice", "x") is False
+    # royxatdan otish va login tekshiruvi
+    assert auth.royxatdan_otish("alice", "secret", "alice@example.com") is True
+    assert auth.royxatdan_otish("alice", "x", "bademail") is False
     assert auth.login("alice", "secret") is True
     assert auth.login("alice", "bad") is False
 
