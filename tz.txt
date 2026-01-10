@@ -1,0 +1,47 @@
+TEXNIK TOPSHIRIQ (TZ)
+“Parking tizimi” loyihasi
+1. KIRISH
+Ushbu hujjat Python dasturlash tilida ishlab chiqiladigan “Parking tizimi” loyihasi uchun texnik talablarni belgilaydi.
+2. UMUMIY MA’LUMOTLAR
+Loyiha avtoturargoh faoliyatini avtomatlashtirish, mashinalarni hisobga olish va to‘lovlarni aniqlash uchun mo‘ljallangan.
+3. FUNKSIONAL TALABLAR
+3.1 Ro‘yxatdan o‘tish
+3.2 Login tizimi
+3.3 Mashina kiritish
+3.4 Mashina chiqarish
+3.5 Parking holatini ko‘rish
+3.6 To‘lov hisoblash
+4. NOFUNKTSIONAL TALABLAR
+Python 3 dasturlash tili
+Konsol interfeys
+Tezkor ishlash
+Xavfsizlik
+5. ARXITEKTURA
+Loyiha OOP asosida ishlab chiqiladi.
+Asosiy sinflar:
+User – foydalanuvchi
+Car – avtomobil
+Parking – parking boshqaruvi
+AuthService – login/ro‘yxatdan o‘tish
+6. MA’LUMOTLARNI SAQLASH
+Ma’lumotlar JSON fayl orqali saqlanadi.
+JSON yengil va kichik loyihalar uchun qulay hisoblanadi.
+7. MA’LUMOTLAR BAZASI (JSON FORMAT)
+JSON faylda quyidagi ma’lumotlar saqlanadi:
+- Foydalanuvchilar
+- Mashinalar
+- Parking joylari
+- To‘lovlar tarixi
+
+Python json moduli orqali o‘qish va yozish amalga oshiriladi.
+8. INTERFEYS TALABLARI
+Konsolda menyu orqali boshqariladi.
+Foydalanuvchi uchun qulay va tushunarli.
+9. TESTLASH
+Login testi
+Mashina kiritish testi
+To‘lov hisoblash testi
+10. KUTILAYOTGAN NATIJA
+Ishlaydigan Parking tizimi konsol dasturi
+11. XULOSA
+Loyiha universitet talablari asosida ishlab chiqiladi.
