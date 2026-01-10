@@ -1,5 +1,6 @@
-from parking.parking import Parking
 from datetime import datetime, timedelta, timezone
+
+from parking.core.parking import Parking
 
 
 def test_enter_and_exit_fee(test_storage):

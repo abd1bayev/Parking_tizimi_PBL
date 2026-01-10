@@ -1,6 +1,6 @@
+from parking.core.parking import Parking
 from parking.storage import JSONStorage
 from user.service import AuthService
-from parking.parking import Parking
 
 
 def run():
@@ -15,11 +15,14 @@ def run():
         if choice == "1":
             u = input("Foydalanuvchi nomi: ")
             p = input("Parol: ")
+            # role tanlash: default user, mumkin admin ham kiritish
+            role_in = input("Role (user/admin) [user]: ").strip().lower()
+            role = role_in if role_in in ("admin", "user") else "user"
             # Email to'g'ri kiritilmaguncha so'raymiz
             while True:
                 e = input("Email: ")
                 if auth.email_valid(e):
-                    ok = auth.royxatdan_otish(u, p, e)
+                    ok = auth.royxatdan_otish(u, p, e, role=role)
                     if ok:
                         print("Ro'yxatdan o'tildi.")
                     else:
