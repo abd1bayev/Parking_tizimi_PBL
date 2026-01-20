@@ -6,5 +6,5 @@ from typing import Optional
 class User:
     username: str
     password_hash: str
-    email: Optional[str] = None
+    phone: Optional[str] = None
     role: str = "user"

@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 class AuthService:
     """Foydalanuvchi ro'yxatdan o'tkazish va login qilish uchun xizmat.
 
-    Endi `royxatdan_otish` email parametrini qabul qiladi va ogohlantirishlar (notifications)
+    `royxatdan_otish` telefon raqamini qabul qiladi va ogohlantirishlar (notifications)
     `notifications` ro'yxatiga yoziladi.
     """
 
@@ -25,29 +25,30 @@ class AuthService:
     def _now(self) -> str:
         return datetime.now(timezone.utc).isoformat()
 
-    def email_valid(self, email: str) -> bool:
-        """Sodda email tekshiruvi: @ va domen qismi nuqta mavjudligini tekshiradi."""
+    def phone_valid(self, phone: str) -> bool:
+        """Telefon raqamini tekshirish: +998 bilan boshlanadi, 12 ta raqam."""
         try:
-            return "@" in email and "." in email.split("@")[-1]
+            phone = phone.replace(" ", "").replace("-", "")
+            return phone.startswith("+998") and len(phone) == 13 and phone[1:].isdigit()
         except Exception:
             return False
 
-    def royxatdan_otish(self, username: str, parol: str, email: str, role: str = "user") -> bool:
-        """Foydalanuvchini ro'yxatdan o'tkazadi; agar email noto'g'ri bo'lsa False qaytaradi.
+    def royxatdan_otish(self, username: str, parol: str, phone: str, role: str = "user") -> bool:
+        """Foydalanuvchini ro'yxatdan o'tkazadi; agar telefon noto'g'ri bo'lsa False qaytaradi.
 
         `role` parametri yordamida admin yaratish mumkin (akademik loyihada ehtiyot bo'ling).
         """
-        # sodda email tekshiruvi
-        if not self.email_valid(email):
+        # telefon raqamini tekshirish
+        if not self.phone_valid(phone):
             # ogohlantirish yozamiz
-            self.saqlovchi.append("notifications", {"username": username, "message": "Email noto'g'ri", "time": self._now()})
+            self.saqlovchi.append("notifications", {"username": username, "message": "Telefon noto'g'ri", "time": self._now()})
             return False
 
         foydalanuvchilar = self.saqlovchi.get("users")
         if any(u["username"] == username for u in foydalanuvchilar):
             return False
-        user = User(username=username, password_hash=self._hash(parol), email=email, role=role)
-        self.saqlovchi.append("users", {"username": user.username, "password_hash": user.password_hash, "email": user.email, "role": user.role})
+        user = User(username=username, password_hash=self._hash(parol), phone=phone, role=role)
+        self.saqlovchi.append("users", {"username": user.username, "password_hash": user.password_hash, "phone": user.phone, "role": user.role})
         # ro'yxatdan o'tganligi haqida ogohlantirish
         self.saqlovchi.append("notifications", {"username": username, "message": "Ro'yxatdan o'tdingiz", "time": self._now()})
         return True

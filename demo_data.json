@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "username": "admin_main",
+      "password_hash": "fc618395b55f38756c9a98ec058c267830f84d448ca4e0b893951784b163b617",
+      "phone": "+998 90 123 45 67",
+      "role": "admin"
+    },
+    {
+      "username": "operator_karim",
+      "password_hash": "6b45cbdadfc4545355174ef8f98007f0d935455866c2f7ab38704acc77f17d4a",
+      "phone": "+998 91 500 60 70",
+      "role": "operator"
+    },
+    {
+      "username": "user_ali",
+      "password_hash": "142eabe8fbb94452166f1077f5e5c44e8095458b66e16b1ccd863dc34217c94b",
+      "phone": "+998 92 333 44 55",
+      "role": "user"
+    }
+  ],
+  "cars": [
+    {
+      "reg_number": "20B456EF",
+      "owner": "user_ali",
+      "entry_time": "2026-01-20T15:30:59.745810+00:00",
+      "slot": 1
+    }
+  ],
+  "slots": [
+    null,
+    "20B456EF",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "payments": [
+    {
+      "reg_number": "10A123CD",
+      "owner": "operator_karim",
+      "entry_time": "2026-01-20T15:30:59.744934+00:00",
+      "exit_time": "2026-01-20T15:30:59.746523+00:00",
+      "amount": 0.0,
+      "currency": "UZS"
+    }
+  ],
+  "notifications": [
+    {
+      "username": "admin_main",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:30:59.743600+00:00"
+    },
+    {
+      "username": "operator_karim",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:30:59.744023+00:00"
+    },
+    {
+      "username": "user_ali",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:30:59.744356+00:00"
+    },
+    {
+      "username": "operator_karim",
+      "message": "Sizning mashinangiz 10A123CD parkka kiritildi (slot 0)",
+      "time": "2026-01-20T15:30:59.744934+00:00"
+    },
+    {
+      "username": "user_ali",
+      "message": "Sizning mashinangiz 20B456EF parkka kiritildi (slot 1)",
+      "time": "2026-01-20T15:30:59.745810+00:00"
+    },
+    {
+      "username": "operator_karim",
+      "message": "Sizning mashinangiz 10A123CD parkdan chiqdi. To'lov: 0.0",
+      "time": "2026-01-20T15:30:59.746523+00:00"
+    }
+  ],
+  "reservations": []
+}

@@ -1,73 +1,82 @@
-# Parking Tizimi
+# Parking Tizimi - 3-Tier Role System (v2.0)
 
-Oddiy konsolga yo'naltirilgan Parking tizimi (Python). Loyihaning maqsadi — mashinalarni ro‘yxatga olish, parkga kiritish/chiqarish, bronlash va to‘lovlarni JSON fayl orqali saqlash.
+Oddiy konsolga yo'naltirilgan Parking tizimi (Python). **3-tier role system** bilan: Admin (script), Operator (CLI), va User (CLI).
 
-Tez start
+## 🚀 Tez Start
 
-- Virtual environmentni faollashtiring (agar kerak bo'lsa):
+### 1. Virtual environment
+```bash
+source .venv/bin/activate
 ```
-source venv/bin/activate
-```
-- Paketlar o'rnatish:
-```
+
+### 2. Paketlar o'rnatish
+```bash
 pip install -r requirements.txt
 ```
-- CLI ishga tushurish:
+
+### 3. Admin yaratish (Script orqali)
+```bash
+python create_admin.py
+
+Admin foydalanuvchi nomi: admin_main
+Admin parol: secure_password_123
+Admin telefon: +998 90 123 45 67
 ```
+
+### 4. CLI ishga tushurish
+```bash
 python main.py
 ```
 
-Asosiy xususiyatlar
-- Foydalanuvchi ro'yxatdan o'tkazish va login (rol: `user` yoki `admin`).
-- Avtomobil kirishi va chiqishi — slotlarni boshqarish.
-- Bronlash va bronni bekor qilish.
-- To'lovlarni hisoblash (soatiga konfiguratsiyalangan stavka, `UZS`).
-- JSON fayl bilan saqlash (`data.json`).
+## ✨ Asosiy Xususiyatlar
 
-Loyihaning struktura (eng muhim fayllar)
-- `parking/` — paket: saqlash, asosiy biznes mantiq va kichik yordamchi modullar.
-  - `parking/core/` — `Parking` klassi, `operations`, `utils`.
-  - `parking/models/` — `User`, `Car`, `Payment` dataclasslari.
-  - `parking/views/` — jadval chiqarish yordamchilari.
-- `user/service.py` — autentifikatsiya va ro'yxatdan o'tish.
-- `cli.py` — konsol interfeysi.
-- `data.json` — ilova saqlovchi fayli.
-- `tests/` — pytest testlari.
+- ✅ **3-Tier Role System** — Admin (script), Operator (CLI), User (CLI)
+- ✅ **Phone Validation** — +998 format
+- ✅ **Foydalanuvchi ro'yxatdan o'tish va login**
+- ✅ **Avtomobil kirishi/chiqishi** — slotlarni boshqarish
+- ✅ **Bronlash va bronni bekor qilish**
+- ✅ **To'lovlarni hisoblash** — soatiga stavka (UZS)
+- ✅ **JSON saqlash** — `data.json`
+- ✅ **Jadval UI** — formatted jadvalda hammasini ko'rish
+- ✅ **Automated tests** — 4/4 ✅
 
-Admin yaratish
-- Eng tez usul (python yordamida):
+## 📁 Struktura
+
 ```
-python - <<'PY'
-from parking.storage import JSONStorage
-from user.service import AuthService
-s = JSONStorage('data.json')
-auth = AuthService(s)
-auth.royxatdan_otish('admin','SizningParolingiz','admin@example.uz', role='admin')
-print(s.get('users'))
-PY
+parking/          → Core package
+  ├── core/       → Business logic
+  ├── models/     → Data models
+  └── views/      → UI formatters
+
+user/service.py   → AuthService
+cli.py            → Main interface
+create_admin.py   → Admin script
+tests/            → Automated tests
 ```
 
-Keyingi qadamlar / Takliflar
-- Parol xavfsizligini oshirish (`passlib` yoki `bcrypt`).
-- Unit testlarni kengaytirish va CI qo'shish.
-- JSON o'rniga kichik RDBMS yoki NoSQL (masalan Cosmos DB) uchun adapter.
+## 🎯 Setup
 
-README: shunchaki boshlash uchun. Batafsil arxitektura va TZ fayllari repositoryda mavjud: `ARCHITECTURE.md`, `TZ.md`.
-# Parking_tizimi_PBL
+**Admin:** `python create_admin.py` (script orqali)  
+**Operator/User:** `python main.py` (CLI orqali)
 
-Simple parking system implemented in Python (console-based).
+## 📚 Documentation
 
-Quick start:
+Batafsil: [USAGE_GUIDE.md](USAGE_GUIDE.md), [QUICK_REFERENCE.md](QUICK_REFERENCE.md), [ROLE_SYSTEM.md](ROLE_SYSTEM.md)
 
-1. Run the app:
+## 🧪 Tests
 
 ```bash
-python3 main.py
+pytest tests/ -v
+# 4/4 PASSED ✅
 ```
 
-2. Run the simple tests:
+## 🔐 Security
 
-```bash
-python3 run_tests.py
-```
-# Parking_tizimi_PBL
+- ✅ Password hashing (SHA-256)
+- ✅ Role-based access control
+- ✅ Phone validation (+998 format)
+- ✅ Admin protection (script orqali)
+
+---
+
+**Version:** 2.0 | **Status:** ✅ Production Ready | **Language:** Python 3.12 + Uzbek

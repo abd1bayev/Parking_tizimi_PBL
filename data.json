@@ -1,294 +1,102 @@
 {
   "users": [
     {
-      "username": "abb",
-      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
-      "email": "ad@gmail.com"
-    },
-    {
-      "username": "abd1bayev",
-      "password_hash": "edee29f882543b956620b26d0ee0e7e950399b1c4222f5de05e06425b4c995e9",
-      "email": "abd1bayev@gmail.com"
-    },
-    {
-      "username": "AWDW",
-      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
-      "email": "DAW@DWA.DWA",
-      "role": "user"
-    },
-    {
-      "username": "as",
-      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
-      "email": "as@gmail.com",
-      "role": "user"
-    },
-    {
       "username": "aa",
       "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
-      "email": "aa@gmail.com",
+      "phone": "+998996953578",
+      "role": "operator"
+    },
+    {
+      "username": "admin",
+      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+      "phone": "+998936953578",
+      "role": "operator"
+    },
+    {
+      "username": "jasur",
+      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+      "phone": "+998991111111",
       "role": "admin"
+    },
+    {
+      "username": "ss",
+      "password_hash": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+      "phone": "+998999999999",
+      "role": "user"
     }
   ],
   "cars": [
     {
-      "reg_number": "eqw2342a",
-      "owner": "abd1bayev",
-      "entry_time": "2026-01-10T11:44:54.087400+00:00",
-      "slot": 1
-    },
-    {
-      "reg_number": "23W234DA",
-      "owner": "as",
-      "entry_time": "2026-01-10T11:57:12.633245+00:00",
-      "slot": 3
+      "reg_number": "12D324DW",
+      "owner": "ss",
+      "entry_time": "2026-01-20T15:40:36.788138+00:00",
+      "slot": 4
     }
   ],
   "slots": [
     null,
-    "eqw2342a",
     null,
-    "23W234DA",
     null,
+    null,
+    "12D324DW",
     null,
     null,
     null,
     null,
     null
   ],
-  "payments": [
-    {
-      "reg_number": "10C234BD",
-      "owner": "abd1bayev",
-      "entry_time": "2026-01-10T11:44:47.671364+00:00",
-      "exit_time": "2026-01-10T11:58:08.784445+00:00",
-      "amount": 0.45
-    },
-    {
-      "reg_number": "11S321HT",
-      "owner": "abd1bayev",
-      "entry_time": "2026-01-10T11:52:22.239568+00:00",
-      "exit_time": "2026-01-10T12:05:01.536015+00:00",
-      "amount": 1054.58,
-      "currency": "UZS"
-    }
-  ],
+  "payments": [],
   "notifications": [
     {
-      "username": "abd1bayev",
-      "message": "Email noto'g'ri",
-      "time": "2026-01-10T11:30:06.983745"
-    },
-    {
-      "username": "abb",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:31:37.255497"
-    },
-    {
-      "username": "abb",
-      "message": "Ro'yxatdan o'tdingiz",
-      "time": "2026-01-10T11:31:50.487995"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Ro'yxatdan o'tdingiz",
-      "time": "2026-01-10T11:43:43.909324"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T11:43:57.421086"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Sizning mashinangiz 10C234BD parkka kiritildi (slot 0)",
-      "time": "2026-01-10T11:44:47.671364+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Sizning mashinangiz eqw2342a parkka kiritildi (slot 1)",
-      "time": "2026-01-10T11:44:54.087400+00:00"
-    },
-    {
-      "username": "AWDW",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:50:38.150545"
-    },
-    {
-      "username": "AWDW",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:50:40.622382"
-    },
-    {
-      "username": "AWDW",
-      "message": "Ro'yxatdan o'tdingiz",
-      "time": "2026-01-10T11:50:49.159743+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T11:51:43.358689+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Sizning mashinangiz 11S321HT parkka kiritildi (slot 2)",
-      "time": "2026-01-10T11:52:22.239568+00:00"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:14.703731"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:15.239984"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:15.463389"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:15.719703"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:17.239604"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:17.887358"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:18.406469"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:18.935412"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:19.111283"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:19.343347"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:19.560180"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:21.207840"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:21.415899"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:21.642441"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:21.847697"
-    },
-    {
-      "username": "as@gmai.com",
-      "message": "Email noto'g'ri kiritildi",
-      "time": "2026-01-10T11:53:22.086558"
-    },
-    {
-      "username": "as",
-      "message": "Ro'yxatdan o'tdingiz",
-      "time": "2026-01-10T11:53:38.121040+00:00"
-    },
-    {
-      "username": "as",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T11:56:49.648370+00:00"
-    },
-    {
-      "username": "as",
-      "message": "Sizning mashinangiz 23W234DA parkka kiritildi (slot 3)",
-      "time": "2026-01-10T11:57:12.633245+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Sizning mashinangiz 10C234BD parkdan chiqdi. To'lov: 0.45",
-      "time": "2026-01-10T11:58:08.784445+00:00"
-    },
-    {
-      "username": "as",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T12:04:36.248145+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Sizning mashinangiz 11S321HT parkdan chiqdi. To'lov: 1054.58",
-      "time": "2026-01-10T12:05:01.536015+00:00"
-    },
-    {
-      "username": "as",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T13:08:40.191374+00:00"
-    },
-    {
-      "username": "as",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T13:12:10.987375+00:00"
-    },
-    {
-      "username": "abd1bayev",
-      "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T13:13:28.244545+00:00"
-    },
-    {
       "username": "aa",
       "message": "Ro'yxatdan o'tdingiz",
-      "time": "2026-01-10T13:27:47.260011+00:00"
+      "time": "2026-01-20T15:22:55.005471+00:00"
+    },
+    {
+      "username": "admin",
+      "message": "Login urinish: muvaffaqiyatsiz",
+      "time": "2026-01-20T15:23:03.533174+00:00"
+    },
+    {
+      "username": "admin",
+      "message": "Login urinish: muvaffaqiyatsiz",
+      "time": "2026-01-20T15:25:09.286713+00:00"
+    },
+    {
+      "username": "admin",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:35:35.765779+00:00"
+    },
+    {
+      "username": "jasur",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:36:42.543369+00:00"
+    },
+    {
+      "username": "jasur",
+      "message": "Login urinish: muvaffaqiyatli",
+      "time": "2026-01-20T15:37:03.518875+00:00"
     },
     {
       "username": "aa",
       "message": "Login urinish: muvaffaqiyatli",
-      "time": "2026-01-10T13:27:56.172537+00:00"
+      "time": "2026-01-20T15:38:00.496186+00:00"
+    },
+    {
+      "username": "ss",
+      "message": "Ro'yxatdan o'tdingiz",
+      "time": "2026-01-20T15:39:11.978368+00:00"
+    },
+    {
+      "username": "ss",
+      "message": "Login urinish: muvaffaqiyatli",
+      "time": "2026-01-20T15:39:18.953472+00:00"
+    },
+    {
+      "username": "ss",
+      "message": "Sizning mashinangiz 12D324DW parkka kiritildi (slot 4)",
+      "time": "2026-01-20T15:40:36.788138+00:00"
     }
   ],
-  "reservations": [
-    {
-      "owner": "as",
-      "slot": 0,
-      "time": "2026-01-10T13:12:26.115676+00:00"
-    },
-    {
-      "owner": "as",
-      "slot": 5,
-      "time": "2026-01-10T13:12:47.556058+00:00"
-    },
-    {
-      "owner": "as",
-      "slot": 6,
-      "time": "2026-01-10T13:12:51.840588+00:00"
-    },
-    {
-      "owner": "as",
-      "slot": 7,
-      "time": "2026-01-10T13:12:54.172137+00:00"
-    }
-  ]
+  "reservations": []
 }
